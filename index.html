@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edward Falk</title>
+<meta name="description" content="Edward Falk: electronics engineer (embedded systems), AI systems developer and IT consultant in Gothenburg, Sweden.">
+<meta property="og:title" content="Edward Falk">
+<meta property="og:description" content="Electronics engineer · AI systems developer · IT consultant since 2005">
+<meta property="og:url" content="https://edwardfalk.se/">
+<meta property="og:image" content="https://edwardfalk.se/img/happy-mac.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23111'/><text x='8' y='12.5' font-size='11' font-family='monospace' text-anchor='middle' fill='%23f2b33d'>EF</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header class="hero">
+  <p class="kicker">edwardfalk.se</p>
+  <h1>Edward Falk</h1>
+  <p class="role">Electronics engineer · AI systems developer · IT consultant since 2005</p>
+  <p class="lede">I build systems where hardware, software and AI meet: a voice AI living inside a 1991
+  Macintosh, a wind-plant simulator for the Swedish power grid, and the self-hosted agent tooling I use
+  to run many AI-assisted projects in parallel.</p>
+  <ul class="contact">
+    <li><a href="mailto:edward@falkdata.se">edward@falkdata.se</a></li>
+    <li><a href="tel:+46735300108">+46 73 530 01 08</a></li>
+    <li><a href="https://github.com/edwardfalk">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/falkedward/">LinkedIn</a></li>
+    <li>Gothenburg, Sweden</li>
+  </ul>
+  <p class="actions">
+    <a class="btn" href="https://github.com/edwardfalk">All projects on GitHub →</a>
+    <a class="btn ghost" href="cv.pdf">Download CV (PDF)</a>
+  </p>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>I've run my own IT company, <a href="https://falkdata.se">Falk Data</a>, for twenty years:
+  troubleshooting, networks, security and support for companies and private clients. In 2026 I
+  finished a two-year degree as an electronics engineer in embedded systems at Yrgo in Gothenburg, to
+  take that experience somewhere new.</p>
+  <p>What I bring is the combination: hands-on electronics (oscilloscope, soldering iron, datasheets from
+  the 1980s), embedded Linux and microcontrollers, and a lot of practical experience making AI models
+  do reliable work with tools, memory and review, not just chat.</p>
+</section>
+
+<section>
+  <h2>Featured projects</h2>
+
+  <article class="project feature">
+    <img src="img/happy-mac.jpg" alt="Happy Mac on the Macintosh Classic II CRT, listening, with the Ericofon handset beside it" width="1152" height="2048" loading="lazy">
+    <div>
+      <h3>Project ScrLk: Happy Mac</h3>
+      <p class="tags">Embedded Linux · voice AI · retro hardware · degree project</p>
+      <p>A Raspberry Pi 5 inside a 1991 Macintosh Classic II drives the original 9" monochrome CRT
+      directly from its GPIO pins. You talk to the AI assistant <em>Happy Mac</em> through a 1950s Swedish
+      Ericofon handset. He runs the apps and games on screen, answers in Swedish or English, and can read
+      live traffic from a passive network tap. He can watch but never interfere.</p>
+      <ul>
+        <li>Custom device-tree overlay for the Mac's video timing, every signal checked on an oscilloscope first</li>
+        <li>Carbon-microphone handset through a modified USB sound card, including tracking down a hidden +23.8 dB sidetone inside the chip</li>
+        <li>Voice agent with tools and memory that can be interrupted mid-sentence</li>
+        <li>Built during my internship at EQ2 with classmate Felix Da Silva Gunnarsson</li>
+      </ul>
+      <p><a href="https://github.com/edwardfalk/Project-ScrLk">Full write-up and photos →</a></p>
+    </div>
+  </article>
+
+  <div class="grid">
+    <article class="project">
+      <h3>WindSim</h3>
+      <p class="tags">Python · energy systems · simulation</p>
+      <p>A deterministic simulation of a small Swedish wind plant. It estimates what the plant would
+      have produced and earned at a real site, and rehearses Svenska kraftnät's mFRR/aFRR
+      prequalification, the test a plant must pass before selling balancing power to the grid. Every
+      number carries an evidence level, from <em>assumed</em> to <em>fitted to real logs</em>.</p>
+      <p class="note">Private for now</p>
+    </article>
+
+    <article class="project">
+      <h3>Self-hosted AI agent infrastructure</h3>
+      <p class="tags">Claude Code · MCP · Docker · Tailscale</p>
+      <p>A git-backed memory vault shared by every AI coding session. A nightly "librarian" agent files
+      and links new notes, and an MCP connector on my own VPS makes it reachable from anywhere. Plans
+      get a second-model critique and code gets blind parallel reviews before every push. Earlier work:
+      RAG with Qdrant and Redis, knowledge graphs, and custom MCP servers.</p>
+      <p class="note">Private: personal data</p>
+    </article>
+
+    <article class="project">
+      <h3>Say Color</h3>
+      <p class="tags">Android · Kotlin · computer vision · accessibility</p>
+      <p>Says the colour of a garment out loud, built for a visually impaired client. It turns on the
+      flashlight, classifies three frames and reconciles them before speaking, because one frame under
+      household light isn't reliable enough to tell someone who can't check.</p>
+      <p class="note">In testing</p>
+    </article>
+
+    <article class="project">
+      <h3>Glider</h3>
+      <p class="tags">TypeScript · physics · procedural terrain</p>
+      <p>A browser gliding game with real aerodynamics, procedurally generated terrain and thermals to
+      find. The flight model is parameterised so it can fly on other worlds. It's also my testbed for
+      fully AI-generated code.</p>
+      <p><a href="https://edwardfalk.github.io/glider/">Play it →</a></p>
+    </article>
+
+    <article class="project">
+      <h3>FPGA hardware acceleration</h3>
+      <p class="tags">VHDL · Cyclone V · SPI</p>
+      <p>An Arduino offloads 7-segment display driving to an FPGA over SPI, with and without
+      metastability protection. Also from the degree: a digital guitar filter on FPGA, an autonomous
+      Arduino car and a servo-driven drum machine.</p>
+      <p><a href="https://github.com/edwardfalk/digitalteknik-lab1-hvacc">Repo →</a></p>
+    </article>
+
+    <article class="project">
+      <h3>Cosmic Vibe</h3>
+      <p class="tags">JavaScript · p5.js</p>
+      <p>A rhythm-driven space shooter, made as an experiment in how far AI coding can go without my
+      writing a line of code myself. The code, graphics and animation are all AI-generated.</p>
+      <p><a href="https://edwardfalk.github.io/vibe/">Play it →</a></p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="entry">
+    <p class="when">2005 – present</p>
+    <div>
+      <h3>Falk Data AB: founder, IT consultant</h3>
+      <p>IT support, troubleshooting, networks, security and training for companies and private
+      clients, and more recently AI automation. Sole trader until 2023, then a limited company. The job
+      is problem-solving: understanding what the customer actually needs, then making it work.</p>
+    </div>
+  </div>
+  <div class="entry">
+    <p class="when">2025 – 2026</p>
+    <div>
+      <h3>EQ2, Gothenburg: internship (LIA)</h3>
+      <p>Built Project ScrLk, from first prototype to the degree-presentation demo.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="entry">
+    <p class="when">2024 – 2026</p>
+    <div>
+      <h3>Yrgo, Gothenburg: Electronics Engineer, Embedded Systems</h3>
+      <p>Two-year higher vocational degree. Analog and digital electronics, VHDL/FPGA, embedded C/C++,
+      signal processing, test automation, embedded Linux, agile project work.</p>
+    </div>
+  </div>
+  <div class="entry">
+    <p class="when">Earlier</p>
+    <div>
+      <h3>University studies</h3>
+      <p>Informatics, databases, psychology, theoretical philosophy, business.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>C, C++, Python, TypeScript/JavaScript, Rust, VHDL, Kotlin</dd>
+    <dt>Embedded</dt><dd>Raspberry Pi, Arduino, ESP32, AVR, embedded Linux (device tree, KMS/DRM, PipeWire), MQTT</dd>
+    <dt>Electronics</dt><dd>Analog and digital design, signal processing, PCB design (KiCad), soldering, oscilloscope, logic and spectrum analysers</dd>
+    <dt>AI</dt><dd>LLM agents and tool use, MCP servers, RAG and vector databases, voice AI, Claude Code, Codex</dd>
+    <dt>Infrastructure</dt><dd>Linux, Docker, Ansible, Tailscale, VPS hosting, networking, Microsoft 365, Google Workspace</dd>
+    <dt>Languages spoken</dt><dd>Swedish (native), English (fluent)</dd>
+  </dl>
+</section>
+
+<section class="aside">
+  <h2>Outside work</h2>
+  <p>I play guitar and synth in the Gothenburg band the Blindness and I'm building my own synthesizer.
+  I once meant to become an artist, took an internship in a computer shop instead, and two years later
+  bought the company with money I'd won playing online poker.</p>
+</section>
+
+<footer>
+  <p>Edward Falk · <a href="mailto:edward@falkdata.se">edward@falkdata.se</a> · <a href="https://github.com/edwardfalk">github.com/edwardfalk</a></p>
+</footer>
+
+</main>
+</body>
+</html>
