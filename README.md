@@ -1,6 +1,6 @@
-# edwardfalk.se
+# edwardfalk.com
 
-Source for [edwardfalk.se](https://edwardfalk.se), Edward Falk's CV page. It's a single static page
+Source for [edwardfalk.com](https://edwardfalk.com), Edward Falk's CV page (edwardfalk.se forwards here). It's a single static page
 (`index.html` + `style.css`), served by GitHub Pages.
 
 `cv.pdf` is rendered from the same page through its print stylesheet: open the page in Chrome,

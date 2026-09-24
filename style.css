@@ -207,7 +207,8 @@ footer {
   @page { size: A4; margin: 12mm 14mm; }
   body { font-size: 9pt; line-height: 1.45; }
   main { max-width: none; padding: 0; }
-  .actions, .feature img, .kicker, .aside { display: none; }
+  .actions, .feature img, .aside { display: none; }
+  .kicker { margin-bottom: 4pt; font-size: 8pt; }
   h1 { font-size: 22pt; }
   .role { margin: 4pt 0 8pt; font-size: 9pt; }
   .lede { font-size: 10pt; margin-bottom: 8pt; }
