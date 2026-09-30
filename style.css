@@ -48,6 +48,27 @@ h1, h2, h3 { line-height: 1.2; margin: 0; }
 
 /* Header */
 
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 40px;
+  align-items: start;
+}
+
+.portrait { margin: 6px 0 0; }
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.portrait figcaption {
+  margin-top: 8px;
+  font: 0.75rem/1.4 var(--mono);
+  color: var(--muted);
+}
+
 .kicker {
   font: 500 0.8rem var(--mono);
   letter-spacing: 0.08em;
@@ -190,6 +211,8 @@ footer {
 
 @media (max-width: 680px) {
   main { padding: 36px 16px 32px; }
+  .hero { grid-template-columns: 1fr; gap: 20px; }
+  .portrait { order: -1; width: min(240px, 70%); margin: 0; }
   .feature, .grid, .entry, .skills { grid-template-columns: 1fr; }
   .feature img { max-height: 340px; }
   .entry { gap: 2px; }
@@ -207,7 +230,8 @@ footer {
   @page { size: A4; margin: 12mm 14mm; }
   body { font-size: 9pt; line-height: 1.45; }
   main { max-width: none; padding: 0; }
-  .actions, .feature img, .aside { display: none; }
+  .actions, .feature img, .aside, .portrait { display: none; }
+  .hero { display: block; }
   .kicker { margin-bottom: 4pt; font-size: 8pt; }
   h1 { font-size: 22pt; }
   .role { margin: 4pt 0 8pt; font-size: 9pt; }
