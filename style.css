@@ -28,6 +28,8 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+.print-only { display: none; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -236,7 +238,8 @@ footer {
   @page { size: A4; margin: 12mm 14mm; }
   body { font-size: 9pt; line-height: 1.45; }
   main { max-width: none; padding: 0; }
-  .actions, .feature img, .aside, .portrait { display: none; }
+  .actions, .feature img, .aside, .portrait, .web-only { display: none; }
+  .print-only { display: inline; }
   .hero { display: block; }
   .kicker { margin-bottom: 4pt; font-size: 8pt; }
   h1 { font-size: 22pt; }

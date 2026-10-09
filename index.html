@@ -144,9 +144,21 @@
       <h3>FPGA hardware acceleration</h3>
       <p class="tags">VHDL · Cyclone V · SPI</p>
       <p>An Arduino offloads 7-segment display driving to an FPGA over SPI, with and without
-      metastability protection. Also from the degree: a digital guitar filter on FPGA and a
-      servo-driven drum machine.</p>
+      metastability protection. Also from the degree: a digital guitar filter on FPGA<span class="print-only">
+      and a servo-driven drum machine</span>.</p>
       <p><a href="https://github.com/edwardfalk/digitalteknik-lab1-hvacc">Repo →</a></p>
+    </article>
+
+    <article class="project web-only">
+      <h3>Servo drum machine</h3>
+      <p class="tags">C · ATmega328P · timers · PWM · ADC</p>
+      <p>A classmate decided a drum machine was impossible with the hardware our course allowed. I took
+      that as a challenge and started building a mechanical one the day before the presentation: two
+      servos left over from the race car, on a frame of old Meccano, beating a cardboard-box bass drum
+      and a paper-cup snare with a tinfoil head. Underneath it's register-level C on the Arduino's
+      ATmega328P: hardware PWM drives the servos, a 1 ms timer interrupt keeps the beat, and a
+      potentiometer sets the tempo.</p>
+      <p class="note">Embedded Systems 1 · passed with distinction (VG)</p>
     </article>
 
     <article class="project">
