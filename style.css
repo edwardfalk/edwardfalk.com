@@ -184,6 +184,22 @@ section > p { max-width: 42em; }
   gap: 20px;
 }
 
+/* A grid card with a photo spans both columns, photo beside the text */
+.wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.wide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
 /* Experience / education */
 
 .entry {
@@ -221,7 +237,7 @@ footer {
   main { padding: 36px 16px 32px; }
   .hero { grid-template-columns: 1fr; }
   .portrait { order: -1; width: min(240px, 70%); margin: 0 0 20px; }
-  .feature, .grid, .entry, .skills { grid-template-columns: 1fr; }
+  .feature, .grid, .wide, .entry, .skills { grid-template-columns: 1fr; }
   .feature img { max-height: 340px; }
   .entry { gap: 2px; }
   .skills { gap: 2px; }
