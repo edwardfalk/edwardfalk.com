@@ -173,6 +173,9 @@ section > p { max-width: 42em; }
   display: block;
 }
 
+/* For photos whose subject sits low in the frame, crop from the bottom instead */
+.feature img.focus-low { object-position: center 80%; }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

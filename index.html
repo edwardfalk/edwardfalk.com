@@ -77,6 +77,30 @@
     </div>
   </article>
 
+  <article class="project feature">
+    <img class="focus-low" src="img/yrgo-grand-prix.jpg" alt="Two small self-driving robot cars side by side on the black Yrgo Grand Prix track, between curved white walls" width="760" height="1080" loading="lazy">
+    <div>
+      <h3>Yrgo Grand Prix: autonomous race cars</h3>
+      <p class="tags">Arduino · C++ · PID control · I²C · Scrum</p>
+      <p>Team Edison (classmates Felix Da Silva Gunnarsson, Santiago Bautista Barrera and me) built two
+      self-driving cars for Yrgo's yearly autonomous-car race, working in two-week Scrum sprints. Our car
+      SDA reached the final and finished third. As technical lead I worked mainly on the steering code
+      and its tuning.</p>
+      <ul>
+        <li>The kit's ultrasonic sensor on a servo was too slow and the glossy walls fooled it, so we
+        switched to three fixed VL53L0X laser distance sensors in CAD-designed, 3D-printed mounts</li>
+        <li>The sensors share one I²C bus, whose two lines gave the cars their names, SDA and SCL. Each
+        sensor is woken in turn through its shutdown pin and given its own address at boot</li>
+        <li>PD steering on the left–right wall distance, speed scaled by the distance ahead, automatic
+        sensor resets after dropouts, and IR start/stop as the race rules require</li>
+        <li>Crashes debugged from the serial log at the exact crash point, with a logic analyser and
+        oscilloscope on the sensor bus</li>
+        <li>In the final I retuned the steering minutes before the start, got it backwards, and watched
+        the car swing wide into the outer wall. Lesson learned: freeze the code before race day</li>
+      </ul>
+    </div>
+  </article>
+
   <div class="grid">
     <article class="project">
       <h3>WindSim</h3>
@@ -120,8 +144,8 @@
       <h3>FPGA hardware acceleration</h3>
       <p class="tags">VHDL · Cyclone V · SPI</p>
       <p>An Arduino offloads 7-segment display driving to an FPGA over SPI, with and without
-      metastability protection. Also from the degree: a digital guitar filter on FPGA, an autonomous
-      Arduino car and a servo-driven drum machine.</p>
+      metastability protection. Also from the degree: a digital guitar filter on FPGA and a
+      servo-driven drum machine.</p>
       <p><a href="https://github.com/edwardfalk/digitalteknik-lab1-hvacc">Repo →</a></p>
     </article>
 
