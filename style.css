@@ -178,6 +178,9 @@ section > p { max-width: 42em; }
 /* For photos whose subject sits low in the frame, crop from the bottom instead */
 .feature img.focus-low { object-position: center 80%; }
 
+/* For photos that must show whole: keep their own shape at the top of the column */
+.feature img.whole { height: auto; }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -252,9 +255,11 @@ footer {
     --line: #ccc; --accent: #8a4a08;
   }
   @page { size: A4; margin: 12mm 14mm; }
-  body { font-size: 9pt; line-height: 1.45; }
+  body { font-size: 9pt; line-height: 1.4; }
   main { max-width: none; padding: 0; }
-  .actions, .feature img, .aside, .portrait, .web-only { display: none; }
+  /* In print a wide card drops its photo and sits in the grid like any other card */
+  .wide { display: block; grid-column: auto; }
+  .actions, .feature img, .wide img, .aside, .portrait, .web-only { display: none; }
   .print-only { display: inline; }
   .hero { display: block; }
   .kicker { margin-bottom: 4pt; font-size: 8pt; }
